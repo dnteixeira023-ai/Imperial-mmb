@@ -1,1 +1,371 @@
-mmb
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Imperial MMB - Seleção</title>
+<style>
+  :root{
+    --gold: #d9b33a;
+    --dark: #071033; /* azul bem escuro */
+    --bg: linear-gradient(180deg,#071033 0%, #071033 60%, #081233 100%);
+    --card: rgba(255,255,255,0.03);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: #fff;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* Top / Hero */
+  header{
+    padding:28px 18px;
+    display:flex;
+    gap:16px;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,0.04);
+    background: linear-gradient(90deg, rgba(7,16,51,0.95), rgba(10,18,55,0.9));
+  }
+  .logo{
+    width:68px;height:68px;border-radius:12px;
+    background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.5);
+  }
+  .logo img{width:100%;height:100%;object-fit:contain}
+  .head-txt h1{margin:0;font-size:20px;letter-spacing:1px;color:var(--gold)}
+  .head-txt p{margin:2px 0 0 0;font-size:13px;opacity:0.85}
+
+  /* Main layout */
+  .container{max-width:980px;margin:28px auto;padding:0 18px}
+  .grid{
+    display:grid;
+    grid-template-columns: 1fr 420px;
+    gap:28px;
+    align-items:start;
+  }
+  /* Left - info */
+  .panel{
+    background:var(--card);
+    padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);
+    box-shadow: 0 10px 30px rgba(2,6,23,0.45);
+  }
+  .hero-banner{
+    display:flex;gap:16px;align-items:center;
+  }
+  .hero-banner .big{
+    flex:1;
+  }
+  .big h2{margin:0;font-size:24px;color:var(--gold)}
+  .big p{margin:8px 0 0 0;line-height:1.4;opacity:0.95}
+
+  .info-row{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+  .pill{background:rgba(255,255,255,0.04);padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px}
+
+  /* Right - form box */
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.15));
+    padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);
+  }
+  .step-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  .progress{
+    height:10px;background:rgba(255,255,255,0.04);border-radius:10px;overflow:hidden
+  }
+  .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#ffea8a);width:0%}
+
+  form .field{margin:10px 0}
+  label{display:block;font-size:13px;margin-bottom:6px;opacity:0.9}
+  input, select, textarea{
+    width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);
+    background: rgba(0,0,0,0.25);color:#fff;font-size:14px;outline:none;
+  }
+  textarea{min-height:100px;resize:vertical}
+  .row{display:flex;gap:8px}
+  .row .col{flex:1}
+
+  .actions{display:flex;gap:10px;margin-top:12px;justify-content:flex-end}
+  .btn{
+    padding:10px 14px;border-radius:8px;border:none;font-weight:700;cursor:pointer;
+    background:var(--gold);color:var(--dark);
+  }
+  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff}
+  .small-note{font-size:12px;opacity:0.8;margin-top:8px}
+
+  /* final success */
+  .success{
+    text-align:center;padding:18px;border-radius:10px;background:rgba(255,255,255,0.02)
+  }
+
+  /* responsive */
+  @media (max-width:920px){
+    .grid{grid-template-columns:1fr; }
+    .logo{width:56px;height:56px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <!-- coloque o arquivo logo.png (o escudo) na mesma pasta do index.html -->
+    <img src="logo.png" alt="Imperial MMB">
+  </div>
+  <div class="head-txt">
+    <h1>Imperial MMB</h1>
+    <p>Seleção Oficial — Mamoball</p>
+  </div>
+</header>
+
+<main class="container">
+  <div class="grid">
+    <!-- esquerda: apresentação -->
+    <section class="panel">
+      <div class="hero-banner">
+        <div class="big">
+          <h2>Bem-vindo ao Império</h2>
+          <p>Imperial MMB é o clube do Mamoball com identidade imperial: disciplina, raça e estratégia.  
+          Não buscamos apenas estrelas — buscamos guerreiros que vistam a camisa e honrem o grupo.</p>
+
+          <div class="info-row">
+            <div class="pill">Fundado: 2025</div>
+            <div class="pill">Estádio: El Calderano</div>
+            <div class="pill">Capacidade: 55.000</div>
+          </div>
+
+          <p style="margin-top:14px;line-height:1.5">
+            <strong>Uniformes:</strong><br>
+            Principal: Azul-escuro com detalhes dourados.<br>
+            Alternativo: Branco com faixas douradas.<br>
+          </p>
+        </div>
+
+      </div>
+
+      <hr style="border:none;height:1px;background:rgba(255,255,255,0.03);margin:18px 0;border-radius:2px">
+
+      <h3 style="margin:0 0 8px 0;color:var(--gold)">Como funciona a seleção</h3>
+      <ol style="padding-left:18px;line-height:1.6">
+        <li>Preencha os dados em 3 etapas rápidas.</li>
+        <li>Revise suas respostas e clique em enviar.</li>
+        <li>Seu cadastro abrirá no WhatsApp do clube com a mensagem preenchida.</li>
+      </ol>
+
+      <p class="small-note">Dica: tenha o WhatsApp instalado para que o link abra direto no app.</p>
+    </section>
+
+    <!-- direita: formulário multi-step -->
+    <aside class="card">
+      <div class="step-header">
+        <div>
+          <strong>Processo de Seleção</strong><br>
+          <small style="opacity:0.8">3 etapas · rápido</small>
+        </div>
+        <div style="width:160px">
+          <div class="progress"><i id="bar"></i></div>
+        </div>
+      </div>
+
+      <form id="selectionForm" onsubmit="return false;">
+        <!-- ETAPA 1 -->
+        <div data-step="1" class="step">
+          <div class="field">
+            <label for="nick">Nick / Nome no jogo</label>
+            <input id="nick" type="text" placeholder="ex: ReiImperial" required>
+          </div>
+          <div class="row">
+            <div class="col field">
+              <label for="nome_real">Nome real (opcional)</label>
+              <input id="nome_real" type="text" placeholder="Seu nome real">
+            </div>
+            <div class="col field">
+              <label for="idade">Idade</label>
+              <input id="idade" type="number" min="10" max="100" placeholder="Ex: 17" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="posicao">Posição preferida</label>
+            <select id="posicao" required>
+              <option value="">-- escolha --</option>
+              <option>GK</option>
+              <option>ATK</option>
+              <option>VL</option>
+              <option>Outros</option>
+            </select>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn" onclick="nextStep()">Próxima etapa</button>
+          </div>
+        </div>
+
+        <!-- ETAPA 2 -->
+        <div data-step="2" class="step" style="display:none">
+          <div class="field">
+            <label>Experiência no Mamoball</label>
+            <select id="exp">
+              <option value="">-- selecione --</option>
+              <option>Iniciante (&lt; 3 meses)</option>
+              <option>Intermediário (3-12 meses)</option>
+              <option>Avançado (&gt; 1 ano)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Já jogou em algum clube?</label>
+            <select id="clubes">
+              <option value="">-- selecione --</option>
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="stats">Principais conquistas/comentários (opcional)</label>
+            <textarea id="stats" placeholder="Gols, títulos, experiência em ligas..."></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn ghost" onclick="prevStep()">Voltar</button>
+            <button type="button" class="btn" onclick="nextStep()">Próxima etapa</button>
+          </div>
+        </div>
+
+        <!-- ETAPA 3 -->
+        <div data-step="3" class="step" style="display:none">
+          <div class="field">
+            <label for="comprometimento">Você pode participar de treinos e campeonatos?</label>
+            <select id="comprometimento" required>
+              <option value="">-- selecione --</option>
+              <option>Sim, sempre</option>
+              <option>Sim, dependendo do horário</option>
+              <option>Raramente</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="porque">Por que quer entrar no Imperial?</label>
+            <textarea id="porque" placeholder="Conte em poucas linhas" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="contato_op">Discord/Instagram (opcional)</label>
+            <input id="contato_op" type="text" placeholder="ex: Discord#1234 ou @seu_insta">
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn ghost" onclick="prevStep()">Voltar</button>
+            <button type="button" class="btn" onclick="submitForm()">Enviar inscrição</button>
+          </div>
+        </div>
+
+      </form>
+
+      <div id="resultArea" style="margin-top:12px;"></div>
+    </aside>
+
+  </div>
+</main>
+
+<script>
+  // ====== CONFIG ======
+  // coloque aqui o número do WhatsApp com código do país + DDD + número, sem + ou espaços.
+  // Exemplo: 55 (Brasil) + 21 (DDD) + 988419164 => 5521988419164
+  const WHATSAPP_NUMBER = "5521988419164";
+
+  // estado
+  let step = 1;
+  const totalSteps = 3;
+
+  // helper: update progress bar & show step
+  function showStep(n){
+    step = n;
+    document.querySelectorAll('.step').forEach(el => el.style.display = 'none');
+    const el = document.querySelector('[data-step="'+n+'"]');
+    if(el) el.style.display = 'block';
+    const pct = Math.round((n-1)/(totalSteps-1)*100);
+    document.getElementById('bar').style.width = pct + '%';
+  }
+
+  function nextStep(){
+    if(!validateStep(step)) return;
+    if(step < totalSteps) showStep(step+1);
+  }
+  function prevStep(){ if(step>1) showStep(step-1); }
+
+  // valida campos básicos por etapa
+  function validateStep(s){
+    if(s === 1){
+      const nick = document.getElementById('nick').value.trim();
+      const idade = document.getElementById('idade').value.trim();
+      const pos = document.getElementById('posicao').value;
+      if(!nick){ alert('Preencha seu nick no jogo.'); return false; }
+      if(!idade){ alert('Informe sua idade.'); return false; }
+      if(!pos){ alert('Escolha uma posição.'); return false; }
+    }
+    if(s === 3){
+      const comp = document.getElementById('comprometimento').value;
+      const pq = document.getElementById('porque').value.trim();
+      if(!comp){ alert('Informe seu comprometimento.'); return false; }
+      if(!pq){ alert('Conte por que quer entrar no Imperial.'); return false; }
+    }
+    return true;
+  }
+
+  // monta mensagem e abre WhatsApp
+  function submitForm(){
+    if(!validateStep(3)) return;
+
+    // coletar dados
+    const data = {
+      nick: document.getElementById('nick').value.trim(),
+      nome_real: document.getElementById('nome_real').value.trim(),
+      idade: document.getElementById('idade').value.trim(),
+      posicao: document.getElementById('posicao').value,
+      exp: document.getElementById('exp').value,
+      clubes: document.getElementById('clubes').value,
+      stats: document.getElementById('stats').value.trim(),
+      comprometimento: document.getElementById('comprometimento').value,
+      porque: document.getElementById('porque').value.trim(),
+      contato_op: document.getElementById('contato_op').value.trim()
+    };
+
+    // montar texto com formatação legível
+    let mensagem = `*Nova inscrição - Imperial MMB*%0A%0A`;
+    mensagem += `Nick: ${encodeURIComponent(data.nick)}%0A`;
+    if(data.nome_real) mensagem += `Nome real: ${encodeURIComponent(data.nome_real)}%0A`;
+    mensagem += `Idade: ${encodeURIComponent(data.idade)}%0A`;
+    mensagem += `Posição: ${encodeURIComponent(data.posicao)}%0A%0A`;
+    mensagem += `*Experiência*:%0A- Nivel: ${encodeURIComponent(data.exp||'Não informado')}; Clube anterior: ${encodeURIComponent(data.clubes||'Não informado')}.%0A`;
+    if(data.stats) mensagem += `Observações: ${encodeURIComponent(data.stats)}%0A%0A`;
+    mensagem += `Comprometimento: ${encodeURIComponent(data.comprometimento)}%0A`;
+    mensagem += `Por que quer entrar: ${encodeURIComponent(data.porque)}%0A`;
+    if(data.contato_op) mensagem += `Contato: ${encodeURIComponent(data.contato_op)}%0A`;
+
+    // montar url do wa.me
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${mensagem}`;
+
+    // mostrar confirmação e abrir WhatsApp
+    const res = document.getElementById('resultArea');
+    res.innerHTML = `<div class="success"><strong>Quase lá!</strong><p>Sua inscrição será aberta no WhatsApp do clube. Clique no botão abaixo para enviar.</p>
+      <div style="margin-top:12px;display:flex;gap:8px;justify-content:center">
+        <a href="${url}" target="_blank" class="btn" style="text-decoration:none">Abrir no WhatsApp</a>
+        <button class="btn ghost" onclick="editSubmission()">Editar</button>
+      </div></div>`;
+
+    // opcional: abrir automaticamente (descomente se quiser auto abrir)
+    // window.open(url, "_blank");
+  }
+
+  function editSubmission(){
+    document.getElementById('resultArea').innerHTML = '';
+    showStep(1);
+  }
+
+  // inicio
+  showStep(1);
+</script>
+</body>
+</html>
